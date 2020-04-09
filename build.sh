@@ -1,16 +1,9 @@
 #! /bin/bash
 
-set -e
+# Echo this is the build script
+echo "Running the build script..."
 
-# Define some path
-SRC=./web
-DST=/var/ww/html
-
-# Check if deployment destination exists
-if [ -d "$DST" ]; then
-    echo "Deployment target exists: $DST"
-    cp -r $SRC/* $DST
-else
-    echo "Deployment target does not exist."
-    exit 2
-fi
+echo "I am ${HOSTNAME}."
+echo "The time is $(date %s)."
+echo "The logged in user is: ${USER}."
+echo "Current working directory: ${PWD}."
