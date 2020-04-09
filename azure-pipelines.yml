@@ -14,8 +14,20 @@ pool:
 # Steps
 steps:
 
+# Say hello
 - script: echo Hello, ICT DevOps!
   displayName: 'Say hello'
 
+# Start the build process
 - script: bash build.sh
   displayName: 'Run build script'
+
+# Start the deployment process
+- task: CopyFilesOverSSH@0
+  inputs:
+    sshEndpoint: 'su-devop-ci@40.112.129.89'
+    contents: 'web/**'
+    targetFolder: '/var/www/html'
+    cleanTargetFolder: true
+    readyTimeout: '20000'
+    failOnEmptySource: true
