@@ -18,9 +18,6 @@ steps:
 - script: echo Hello, ICT DevOps!
   displayName: 'Say hello'
 
-# Start the build process
-- script: bash build.sh
-  displayName: 'Run build script'
 
 # Start the deployment process
 - task: CopyFilesOverSSH@0
@@ -32,3 +29,7 @@ steps:
     cleanTargetFolder: true
     readyTimeout: '20000'
     failOnEmptySource: true
+    
+# Start the build process
+- script: bash build.sh
+  displayName: 'Run build script'
