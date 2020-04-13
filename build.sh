@@ -5,7 +5,7 @@ echo "Building a webpage..."
 
 # Declare and initialize values
 SERVER_NAME=$HOSTNAME
-echo ${SERVER_NAME} 1> web/index.html
+echo ${SERVER_NAME} 1 > web/index.html
 echo ${PWD} 1 > web/index.html
 # ./web/index.html    ${SERVER_NAME}  
 
