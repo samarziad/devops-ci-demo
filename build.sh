@@ -4,7 +4,7 @@
 echo "Building a webpage..."
 
 # Declare and initialize values
- export  $SERVER_NAME=${HOSTNAME}
+ export  SERVER_NAME=${HOSTNAME}
 #echo ${SERVER_NAME} 1 > web/index.html
 
 #echo "vso[task.setvariable variable=${HOSTNAME};]SERVER_NAME"
