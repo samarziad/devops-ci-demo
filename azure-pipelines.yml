@@ -20,7 +20,7 @@ steps:
   displayName: 'Say hello'
 
 # Start the build process
-- script: bash build.sh
+- script: bash build.sh $SERVER_NAME
   displayName: 'Run build script'
   
 # Start the deployment process
