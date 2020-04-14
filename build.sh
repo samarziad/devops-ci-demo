@@ -7,7 +7,8 @@ echo "Building a webpage..."
 SERVER_NAME=$HOSTNAME
 #echo ${SERVER_NAME} 1 > web/index.html
 
-vso[task.setvariable variable = ${HOSTNAME};]SERVER_NAME
+echo "##vso[task.setvariable variable = ${HOSTNAME};]SERVER_NAME"
+
 #sudo chmod -R u+rwx /web/index.html
 #echo ${PWD} 1 > web/index.html
  #./web/index.html    ${SERVER_NAME}  
