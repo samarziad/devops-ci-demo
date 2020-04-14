@@ -6,7 +6,7 @@ echo "Building a webpage..."
 # Declare and initialize values
  export  SERVER_NAME=${HOSTNAME}
  #sed -i "s/{/\${/g" web/index.html
-envsubst '$SERVER_NAME' > web/newIndex.html  
+#envsubst '$SERVER_NAME' > web/newIndex.html  
 #echo ${SERVER_NAME} 1 > web/index.html
 
 #echo "vso[task.setvariable variable=${HOSTNAME};]SERVER_NAME"
