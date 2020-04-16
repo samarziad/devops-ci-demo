@@ -4,7 +4,7 @@
 echo "Building a webpage..."
 
 # Declare and initialize values
- SERVER_NAME=${HOSTNAME}
+ SERVER_NAME :$(HOSTNAME)
  
  $sed  "s/{SERVER_NAME}/SERVER_NAME/g"  web/index.html
 #envsubst '$SERVER_NAME' > web/newIndex.html  
