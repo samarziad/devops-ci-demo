@@ -7,7 +7,7 @@ echo "Building a webpage..."
 SERVER_NAME=${HOSTNAME}
 TIMESTAMP=$(Date:yyyyMMdd).$(Rev:.r)
 #branch_name=$(SourceBranchName)$(Rev:.r)
-Pwd=${{Build.ArtifactStagingDirectory}}
+Pwd=$(Build.ArtifactStagingDirectory)
 
  sed -i "s/SERVER_NAME/${SERVER_NAME}/g"  web/index.html
   sed -i "s/PWD/${Pwd}/g"  web/index.html 
