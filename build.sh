@@ -9,11 +9,12 @@ USER=${USER}
 #TIMESTAMP=$((TeamProject)_$(Build.DefinitionName)_$(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r))
 
 
-DATE=$(Date:MMddyy)
-GIT_REPO= $(Build.Repository.Name)/s
+DATE=$($(Build.DefinitionName)_$(SourceBranchName)_$(Date:yyyyMMdd))
+GIT_REPO= $(Build.Repository.Name)
+Pwd=$(Pipeline.Workspace)
 #echo "##vso[task.setvariable variable=BUILD_DATE;]$DATE"
 #branch_name=$(SourceBranchName)
-Pwd=$(Pipeline.Workspace)/s
+
 
  sed -i "s/SERVER_NAME/${SERVER_NAME}/g"  web/index.html
  sed -i "s/{USER}/${USER}/g"  web/index.html
