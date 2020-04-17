@@ -5,7 +5,12 @@ echo "Building a webpage..."
 
 # Declare and initialize values
 SERVER_NAME=${HOSTNAME}
+Pwd=${Pipeline.Workspace}
+
  sed -i "s/SERVER_NAME/${SERVER_NAME}/g"  web/index.html
+  sed -i "s/${PWD}/${Pwd}/g"  web/index.html 
+  #sed -i "s/SERVER_NAME/${SERVER_NAME}/g"  web/index.html 
+  #sed -i "s/SERVER_NAME/${SERVER_NAME}/g"  web/index.html
 #envsubst '$SERVER_NAME' > web/newIndex.html  
 #echo ${SERVER_NAME} 1 > web/index.html
 
