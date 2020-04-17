@@ -9,6 +9,7 @@
   filename=index.html
  if [[! -f '$filename']] ;
  then
+  echo "build was not successfull. Test failed."
 exit 3
  else 
    echo "build was successfull. Test passed."
