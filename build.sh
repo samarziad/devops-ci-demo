@@ -9,7 +9,7 @@ USER=${USER}
 #TIMESTAMP=$((TeamProject)_$(Build.DefinitionName)_$(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r))
 
 
-DATE=$(date)"
+DATE=$(date)
 #GIT_REPO= $(Build.Repository.Name)
 #Pwd=$(Pipeline.Workspace)
 #echo "##vso[task.setvariable variable=BUILD_DATE;]$DATE"
