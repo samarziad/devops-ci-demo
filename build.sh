@@ -5,7 +5,7 @@ echo "Building a webpage..."
 
 # Declare and initialize values
 SERVER_NAME=${HOSTNAME}
-TIMESTAMP=$(TeamProject)_$(Build.DefinitionName)_$(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r)
+TIMESTAMP=$(Date:yyyyMMdd)
 Pwd=${{Build.ArtifactStagingDirectory}}
 
  sed -i "s/SERVER_NAME/${SERVER_NAME}/g"  web/index.html
