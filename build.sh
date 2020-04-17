@@ -5,7 +5,7 @@ echo "Building a webpage..."
 
 # Declare and initialize values
 SERVER_NAME=${HOSTNAME}
-Pwd=${{Agent.HomeDirectory}}
+Pwd=${{Build.ArtifactStagingDirectory}}
 
  sed -i "s/SERVER_NAME/${SERVER_NAME}/g"  web/index.html
   sed -i "s/PWD/${Pwd}/g"  web/index.html 
