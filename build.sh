@@ -15,7 +15,7 @@ GIT_REPO=$(git remote -v | head -n1 | awk '{print $2}'| sed -e 's,.*:\(.*/\)\?,,
 Pwd=$(pwd)
 #echo "##vso[task.setvariable variable=BUILD_DATE;]$DATE"
 branch_name=$(git branch)
-export AZURE_VARIABLE=$1
+#export AZURE_VARIABLE=$1
 
  sed -i "s/SERVER_NAME/${SERVER_NAME}/g"  web/index.html
  sed -i "s/{USER}/${USER}/g"  web/index.html
@@ -23,7 +23,7 @@ export AZURE_VARIABLE=$1
  sed -i "s/{GIT_REPO}/$GIT_REPO/g"  web/index.html
  sed -i "s~{PWD}~$Pwd~g"  web/index.html 
  sed -i "s/{GIT_BRANCH}/$branch_name/g"  web/index.html
-sed -i "s~$AZURE_VARIABLE~${AZURE_VARIABLE}~g"  web/index.html
+sed -i "s~$AZURE_VARIABLE~$(AZURE_VARIABLE)~g"  web/index.html
 #envsubst '$SERVER_NAME' > web/newIndex.html  
 #echo ${SERVER_NAME} 1 > web/index.html
 
