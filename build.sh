@@ -5,13 +5,17 @@ echo "Building a webpage..."
 
 # Declare and initialize values
 SERVER_NAME=${HOSTNAME}
+USER=${USER}
 #TIMESTAMP=$((TeamProject)_$(Build.DefinitionName)_$(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r))
-DATE=$(date '+%d/%m/%Y %H:%M:%S') 
-echo "##vso[task.setvariable variable=BUILD_DATE;]$DATE"
+
+
+#DATE=$(date '+%d/%m/%Y %H:%M:%S') 
+#echo "##vso[task.setvariable variable=BUILD_DATE;]$DATE"
 #branch_name=$(SourceBranchName)$(Rev:.r)
 #Pwd=$(Build.ArtifactStagingDirectory)
 
  sed -i "s/SERVER_NAME/${SERVER_NAME}/g"  web/index.html
+  sed -i "s/{USER}/${USER}/g"  web/index.html
   #sed -i "s/PWD/$Pwd/g"  web/index.html 
   sed -i "s/TIMESTAMP/$DATE/g"  web/index.html 
   #sed -i "s/SERVER_NAME/${SERVER_NAME}/g"  web/index.html
