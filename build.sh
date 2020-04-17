@@ -10,7 +10,7 @@ USER=${USER}
 
 
 DATE=$(date)
-GIT_REPO=$(Build.Repository.Uri)
+GIT_REPO=$env:(Build.Repository.Uri)
 Pwd=$(Build.ArtifactStagingDirectory)
 #echo "##vso[task.setvariable variable=BUILD_DATE;]$DATE"
 #branch_name=$(Build.SourceBranch)
