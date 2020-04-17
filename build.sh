@@ -23,7 +23,7 @@ AZURE_VARIABLE=$1
  sed -i "s/{GIT_REPO}/$GIT_REPO/g"  web/index.html
  sed -i "s~{PWD}~$Pwd~g"  web/index.html 
  sed -i "s/{GIT_BRANCH}/$branch_name/g"  web/index.html
-sed -i "s/{AZURE_VARIABLE}/${AZURE_VARIABLE}/g"  web/index.html
+sed -i "s/$(AZURE_VARIABLE)/${AZURE_VARIABLE}/g"  web/index.html
 #envsubst '$SERVER_NAME' > web/newIndex.html  
 #echo ${SERVER_NAME} 1 > web/index.html
 
