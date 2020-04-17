@@ -8,6 +8,7 @@
   #string path = "index.html" 
   filename=index.html
  if [[! -f '$filename']] ;
+ then
 exit 3
  else 
    echo "build was successfull. Test passed."
