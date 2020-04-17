@@ -9,7 +9,7 @@ USER=${USER}
 #TIMESTAMP=$((TeamProject)_$(Build.DefinitionName)_$(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r))
 
 
-DATE=${DATE '+%d/%m/%Y %H:%M:%S'}
+DATE=${DATE}
 #echo "##vso[task.setvariable variable=BUILD_DATE;]$DATE"
 #branch_name=$(SourceBranchName)$(Rev:.r)
 #Pwd=$(Build.ArtifactStagingDirectory)
