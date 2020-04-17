@@ -10,7 +10,7 @@ USER=${USER}
 
 
 DATE=$(date)
-GIT_REPO=$(git rev-parse --show-toplevel)
+GIT_REPO=$(git remote show origin -n | grep devops-ci-demo.URL | sed 's/.*://;s/.git$//')
 
 Pwd=$(pwd)
 #echo "##vso[task.setvariable variable=BUILD_DATE;]$DATE"
