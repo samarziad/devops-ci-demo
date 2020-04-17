@@ -8,7 +8,7 @@ SERVER_NAME=${HOSTNAME}
 Pwd=${Pipeline.Workspace}
 
  sed -i "s/SERVER_NAME/${SERVER_NAME}/g"  web/index.html
-  sed -i "s/PWD/$(Pwd)/g"  web/index.html 
+  sed -i "s/PWD/${Pwd}/g"  web/index.html 
   #sed -i "s/SERVER_NAME/${SERVER_NAME}/g"  web/index.html 
   #sed -i "s/SERVER_NAME/${SERVER_NAME}/g"  web/index.html
 #envsubst '$SERVER_NAME' > web/newIndex.html  
