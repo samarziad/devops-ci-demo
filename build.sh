@@ -9,10 +9,10 @@ SERVER_NAME=${HOSTNAME}
 DATE=$(date '+%d/%m/%Y %H:%M:%S') 
 echo "##vso[task.setvariable variable=BUILD_DATE;]$DATE"
 #branch_name=$(SourceBranchName)$(Rev:.r)
-Pwd=$(Build.ArtifactStagingDirectory)
+#Pwd=$(Build.ArtifactStagingDirectory)
 
  sed -i "s/SERVER_NAME/${SERVER_NAME}/g"  web/index.html
-  sed -i "s/PWD/$Pwd/g"  web/index.html 
+  #sed -i "s/PWD/$Pwd/g"  web/index.html 
   sed -i "s/TIMESTAMP/$DATE/g"  web/index.html 
   #sed -i "s/SERVER_NAME/${SERVER_NAME}/g"  web/index.html
 #envsubst '$SERVER_NAME' > web/newIndex.html  
