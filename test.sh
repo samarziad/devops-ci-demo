@@ -6,7 +6,8 @@
 
 # Define path for release ---> index.html (release)
   #string path = "index.html" 
- if[[ ! -e /index.html ]]; then 
+ if[[ ! -e /index.html ]]
+ then 
 exit 3
  else 
    echo "build was successfull. Test passed."
