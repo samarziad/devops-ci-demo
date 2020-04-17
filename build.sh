@@ -10,7 +10,7 @@ USER=${USER}
 
 
 DATE=$(date)
-GIT_REPO=$(Build.Repository.Name)
+GIT_REPO=$Build.Repository.Name
 #Pwd=$(Pipeline.Workspace)
 #echo "##vso[task.setvariable variable=BUILD_DATE;]$DATE"
 #branch_name=$(SourceBranchName)
@@ -19,7 +19,7 @@ GIT_REPO=$(Build.Repository.Name)
  sed -i "s/SERVER_NAME/${SERVER_NAME}/g"  web/index.html
  sed -i "s/{USER}/${USER}/g"  web/index.html
  sed -i "s/TIMESTAMP/${DATE}/g"  web/index.html
- sed -i "s/{GIT_REPO}/$GIT_REPO/g"  web/index.html
+ sed -i "s/{GIT_REPO}/${GIT_REPO}/g"  web/index.html
  #sed -i "s/PWD/$(Pwd)/g"  web/index.html 
 
 #envsubst '$SERVER_NAME' > web/newIndex.html  
