@@ -10,7 +10,7 @@ USER=${USER}
 
 
 DATE=$(date)
-GIT_REPO=$(git remote -v | head -n2 | awk '{print $0}' | sed 's/.*\///' | sed 's/\.git//')
+GIT_REPO=$(git remote get-url origin | sed 's/.*\///' | sed 's/\.git//')
 
 Pwd=$(pwd)
 #echo "##vso[task.setvariable variable=BUILD_DATE;]$DATE"
