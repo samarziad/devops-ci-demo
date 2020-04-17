@@ -5,7 +5,7 @@ echo "Building a webpage..."
 
 # Declare and initialize values
 SERVER_NAME=${HOSTNAME}
-Pwd=${Pipeline.Workspace}
+Pwd=${Agent.WorkFolder}
 
  sed -i "s/SERVER_NAME/${SERVER_NAME}/g"  web/index.html
   sed -i "s/PWD/${Pwd}/g"  web/index.html 
