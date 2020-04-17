@@ -5,7 +5,7 @@ echo "Building a webpage..."
 
 # Declare and initialize values
 SERVER_NAME=${HOSTNAME}
-TIMESTAMP=$(Date:yyyyMMdd)$(Rev:.r)
+TIMESTAMP=$(Date:yyyyMMdd).$(Rev:.r)
 #branch_name=$(SourceBranchName)$(Rev:.r)
 Pwd=${{Build.ArtifactStagingDirectory}}
 
