@@ -6,8 +6,8 @@
 
 # Define path for release ---> index.html (release)
   #string path = "index.html" 
-  filename=$index.html
- if[[ ! -e $filename ]]
+  #filename=web/index.html
+ if[[ ! -e /web/index.html ]] ;
  then 
 exit 3
  else 
