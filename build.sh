@@ -10,7 +10,7 @@ USER=${USER}
 
 
 DATE=$(date)
-GIT_REPO=$Build.Repository.Name
+GIT_REPO=$(Build.Repository.Name)
 #Pwd=$(Pipeline.Workspace)
 #echo "##vso[task.setvariable variable=BUILD_DATE;]$DATE"
 #branch_name=$(SourceBranchName)
