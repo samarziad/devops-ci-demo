@@ -10,7 +10,8 @@ USER=${USER}
 
 
 DATE=$(date)
-GIT_REPO=$(git rev-parse--git)
+GIT_REPO=$(git config --get remote.origin.url | cut -d/ -f5 | cut -d. -f1)"
+
 Pwd=$(pwd)
 #echo "##vso[task.setvariable variable=BUILD_DATE;]$DATE"
 #branch_name=$(Build.SourceBranch)
