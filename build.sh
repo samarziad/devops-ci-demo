@@ -10,7 +10,7 @@ USER=${USER}
 
 
 DATE=$(date)
-GIT_REPO=$env:(Build.Repository.Uri)
+GIT_REPO=$(Build.Repository.Uri)
 Pwd=$(Build.ArtifactStagingDirectory)
 #echo "##vso[task.setvariable variable=BUILD_DATE;]$DATE"
 #branch_name=$(Build.SourceBranch)
@@ -20,7 +20,7 @@ Pwd=$(Build.ArtifactStagingDirectory)
  sed -i "s/{USER}/${USER}/g"  web/index.html
  sed -i "s/TIMESTAMP/${DATE}/g"  web/index.html
  sed -i "s/{GIT_REPO}/${GIT_REPO}/g"  web/index.html
- sed -i "s/PWD/$(Pwd)/g"  web/index.html 
+ sed -i "s/PWD/${Pwd}/g"  web/index.html 
 
 #envsubst '$SERVER_NAME' > web/newIndex.html  
 #echo ${SERVER_NAME} 1 > web/index.html
