@@ -11,7 +11,7 @@ USER=${USER}
 
 DATE=$(date)
 #GIT_REPO=$(git remote -v | head -n1 | awk '{print $2}'| sed -e 's,.*:\(.*/\)\?,,' -e 's/\.git$//')
-GIT_REPO=$(git config -l)
+GIT_REPO=$(git remote show origin -n | grep "Fetch URL:" | sed -E "s#^.*/(.*)$#\1#" | sed "s#.git$##")
 Pwd=$(pwd)
 #echo "##vso[task.setvariable variable=BUILD_DATE;]$DATE"
 branch_name=$(git branch)
