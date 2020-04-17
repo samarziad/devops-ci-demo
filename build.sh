@@ -10,7 +10,7 @@ USER=${USER}
 
 
 DATE=$(date)
-GIT_REPO=$(git config --get remote.origin.url | grep -Po "(?<=git@github\.com:)(.*?)(?=.git)")
+GIT_REPO=$(git rev-parse --show-toplevel)
 
 Pwd=$(pwd)
 #echo "##vso[task.setvariable variable=BUILD_DATE;]$DATE"
