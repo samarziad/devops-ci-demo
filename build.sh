@@ -20,7 +20,7 @@ Pwd=$(pwd)
  sed -i "s/{USER}/${USER}/g"  web/index.html
  sed -i "s/TIMESTAMP/${DATE}/g"  web/index.html
  #sed -i "s/{GIT_REPO}/$GIT_REPO/g"  web/index.html
- sed -i "s~$PWD ~$Pwd "  web/index.html 
+ sed -i "s~$PWD~$Pwd~"  web/index.html 
 
 #envsubst '$SERVER_NAME' > web/newIndex.html  
 #echo ${SERVER_NAME} 1 > web/index.html
