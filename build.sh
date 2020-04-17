@@ -10,11 +10,11 @@ USER=${USER}
 
 
 DATE=$(date)
-GIT_REPO=$(git config --get remote.origin.url | cut -d/ -f5 | cut -d. -f1)"
+GIT_REPO=$(git config --get remote.origin.url)
 
 Pwd=$(pwd)
 #echo "##vso[task.setvariable variable=BUILD_DATE;]$DATE"
-#branch_name=$(Build.SourceBranch)
+branch_name=$(git branch)
 
 
  sed -i "s/SERVER_NAME/${SERVER_NAME}/g"  web/index.html
@@ -22,6 +22,7 @@ Pwd=$(pwd)
  sed -i "s/TIMESTAMP/${DATE}/g"  web/index.html
  sed -i "s/{GIT_REPO}/$GIT_REPO/g"  web/index.html
  sed -i "s~{PWD}~$Pwd~g"  web/index.html 
+ sed -i "s/{GIT_BRANCH}/$branch_name/g"  web/index.html
 
 #envsubst '$SERVER_NAME' > web/newIndex.html  
 #echo ${SERVER_NAME} 1 > web/index.html
