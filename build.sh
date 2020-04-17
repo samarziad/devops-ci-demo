@@ -10,7 +10,7 @@ USER=${USER}
 
 
 DATE=$(date)
-GIT_REPO= ${{github.repository}}
+GIT_REPO=$(git config --get remote.origin.url)
 Pwd=$(pwd)
 #echo "##vso[task.setvariable variable=BUILD_DATE;]$DATE"
 #branch_name=$(Build.SourceBranch)
